@@ -507,9 +507,9 @@ nav .caret {
     margin: 0 0 5px 5px;
 }
 
-.btn-d,
-.btn-d:hover,
-.btn-d:focus {
+/*suppression d'un effet de survol*/
+
+btn-d {
     color: #fff;
     background: rgba(0, 0, 0, 0.3);
 }
