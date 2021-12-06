@@ -517,6 +517,28 @@ btn-d {
 button {
     outline: none !important;
 }
+/*amelioration bloc 2*/
+.explain {
+    font-size: 22px;
+    margin: auto;
+    width: 65%;
+}
+/*amelioration bloc 2 presentation de l agence*/
+.quote {
+    display: block;
+    margin: auto;
+    quotes: none;
+    font-size: 20px;
+    font-style: italic;
+    width: 85%;
+    color: #313030;
+}
+
+/*taille de la balise cite*/
+cite {
+    font-style: normal;
+    font-size: initial;
+}
 
 .btn-rd {
     border-radius: 40px;
@@ -574,6 +596,17 @@ button {
     opacity: 0;
     z-index: 500;
     transition: all 0.3s ease-in-out;
+    background-color: #a42a42; /*amelioration du visuel*/
+    border: solid 2px white;
+}
+
+/*Mise en place de la surbrillance au survol et appuie du scrollToTop*/
+.scrollToTop:hover {
+    background-color: #fcac1b;
+}
+
+.scrollToTop:focus {
+    background-color: #fcac1b;
 }
 
 .scrollToTop span {
