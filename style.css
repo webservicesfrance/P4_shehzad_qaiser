@@ -906,23 +906,43 @@ h4 {
 .tc-image {
     color: #ffffff !important;
 }
+/*amelioration btn atomic*/
 
 .btn-atomic-tangerine {
-    background: #f3976c;
+    background: #a42a42;
     color: #ffffff !important;
+    border: solid 2px transparent;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956 !important;
-    color: #ffffff !important;
+    background: #fcac1b !important;
+    color: #313030 !important;
+    border: solid 2px white;
 }
 
+.btn-atomic-tangerine:focus {
+    background: #fcac1b !important;
+    color: #313030 !important;
+    border: solid 2px white;
+}
+/*ajout et definition hauteur du bloc*/
+#bloc-1-hero {
+    min-height: 476.033px;
+}
+
+/*centrage du bloc*/
 .ltc-white {
+    display: inline-block;
     color: #ffffff !important;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin-top: 3rem;
+    border: solid 3px;
+    border-style: dotted;
 }
-
+/*effet au survol*/
 .ltc-white:hover {
-    color: #cccccc !important;
+    color: #f4fcfc !important;
 }
 
 .ltc-atomic-tangerine {
@@ -941,10 +961,7 @@ h4 {
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
 }
-
-.bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
-}
+/*.bg-lines-h2-bg {background-image: url("img/lines-h2-bg.png");}*/
 
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
@@ -952,6 +969,40 @@ h4 {
 
 .bg-presentation {
     background-image: url("img/image-de-presentation.bmp");
+}
+
+/*mise en place du formulaire*/
+
+.image-resize-mode {
+    width: 7.15em;
+}
+
+.partners {
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+    text-align: justify;
+}
+
+.partners_title {
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+}
+
+#form_1 {
+    font-size: 16px;
+}
+
+#form_1 input,
+#form_1 textarea {
+    border: 2px solid;
+}
+
+#form_1 input:focus,
+#form_1 textarea:focus {
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.07),
+        0px 0px 3px 3px rgba(164, 42, 66, 0.6);
 }
 
 @media (max-width: 1024px) {
