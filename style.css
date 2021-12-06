@@ -107,11 +107,11 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .d-bloc button:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.2);
 }
 
 .d-bloc .icon-round,
@@ -140,7 +140,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, 0.6);
+    color: #313030; /*contraste amelioré*/
 }
 
 .d-bloc .a-btn:hover,
@@ -157,7 +157,37 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: #a42a42;
+}
+
+.d-bloc a .icon-sm,
+.d-bloc a .icon-md,
+.d-bloc a .icon-lg,
+.d-bloc a .icon-xl {
+    border: solid 2px transparent;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.d-bloc a:hover .icon-sm,
+.d-bloc a:hover .icon-md,
+.d-bloc a:hover .icon-lg,
+.d-bloc a:hover .icon-xl {
+    border: solid 2px;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 300ms ease-in-out;
+}
+
+.d-bloc a:focus .icon-sm,
+.d-bloc a:focus .icon-md,
+.d-bloc a:focus .icon-lg,
+.d-bloc a:focus .icon-xl {
+    border: solid 2px;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: 300ms ease-in-out;
+    color: #a42a42;
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -222,6 +252,8 @@ a:hover {
 .l-bloc .divider-h span {
     border-color: rgba(0, 0, 0, 0.1);
 }
+
+/*fin des color*/
 
 .d-bloc .panel .a-btn,
 .l-bloc .a-btn,
