@@ -649,6 +649,14 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
+/*Rajout du focus au lien a*/
+a[data-lightbox]:focus img {
+    opacity: 0.6;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+    border: black solid 5px;
+}
+
 #lightbox-modal {
     display: flex;
     align-items: center;
@@ -740,7 +748,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757 !important;
+    color: #313030 !important; /*corection de la couleur */
 }
 
 .container {
@@ -766,7 +774,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 16px; /*grossissement du pont*/
 }
 
 .tight-width-whitespace {
@@ -794,7 +802,7 @@ p {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 28px; /*grossissement de la taile*/
     line-height: 1.4em;
 }
 
@@ -828,6 +836,11 @@ h4 {
     color: #ffffff !important;
 }
 
+/*Effet au survol*/
+#white:hover {
+    color: #313030 !important;
+}
+
 .portfolio-thumb {
     margin-bottom: 24px;
 }
@@ -837,16 +850,34 @@ h4 {
     margin-top: 50px;
 }
 
+/*correction de la marge*/
+
+.portfolio-row .portfolio-thumb {
+    margin-left: auto;
+    margin-right: auto;
+}
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: #5c5737; /*correction de la couleur*/
+    padding: 40px 40px 40px 40px;
+}
+
+/*correction de la couleur de fond*/
+.grey-background {
+    background-color: #3f3e3e;
     padding: 40px 40px 40px 40px;
 }
 
 .bold-link {
+    font-weight: 900;
+    text-decoration: underline !important;
+}
+
+/*ajout d'effet au survol*/
+.bold-link:hover {
     font-weight: 900;
     text-decoration: underline !important;
 }
@@ -860,11 +891,20 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #f3976c;
+    background-color: #fff; /*correction en blanc*/
 }
 
+/*teinte en rouge le fond*/
+.bgc-atomic-tangerine--color {
+    background-color: #a42a42;
+}
+/*teinte en rouge le fond*/
 .tc-white {
-    color: #f3976c !important;
+    color: #a42a42 !important;
+}
+
+.tc-image {
+    color: #ffffff !important;
 }
 
 .btn-atomic-tangerine {
