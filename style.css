@@ -21,7 +21,7 @@ a:hover {
 .focusedInputBlack:focus {
     border-color: #313030;
     outline: 0;
-    outline: thin dotted \9;
+    outline: thin dotted 9;
 
     box-shadow: 0 0 8px #313030 !important;
 }
