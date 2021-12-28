@@ -6,7 +6,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-/*bloc 0*/
+
 a,
 button {
     transition: all 0.3s ease-in-out;
@@ -44,8 +44,6 @@ a:hover {
     background-size: cover;
     position: relative;
 }
-
-/*bloc 1*/
 .bloc .container {
     padding-left: 0;
     padding-right: 0;
@@ -96,24 +94,19 @@ a:hover {
     left: 0;
     right: 0;
 }
-
 .texture-paper::before {
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
 }
-
 .b-parallax {
     background-attachment: fixed;
 }
-
 .d-bloc {
     color: rgba(255, 255, 255, 0.9);
 }
-
 .d-bloc button:hover {
     color: rgba(255, 255, 255, 0.2);
 }
-
 .d-bloc .icon-round,
 .d-bloc .icon-square,
 .d-bloc .icon-rounded,
@@ -121,11 +114,9 @@ a:hover {
 .d-bloc .icon-semi-rounded-b {
     border-color: rgba(255, 255, 255, 0.9);
 }
-
 .d-bloc .divider-h span {
     border-color: rgba(255, 255, 255, 0.2);
 }
-
 .d-bloc .a-btn,
 .d-bloc .navbar a,
 .d-bloc .navbar-brand,
@@ -159,7 +150,6 @@ a:hover {
 .d-bloc p a:hover {
     color: #a42a42;
 }
-
 .d-bloc a .icon-sm,
 .d-bloc a .icon-md,
 .d-bloc a .icon-lg,
@@ -168,7 +158,6 @@ a:hover {
     border-radius: 50%;
     padding: 1rem;
 }
-
 .d-bloc a:hover .icon-sm,
 .d-bloc a:hover .icon-md,
 .d-bloc a:hover .icon-lg,
@@ -178,7 +167,6 @@ a:hover {
     padding: 1rem;
     transition: 300ms ease-in-out;
 }
-
 .d-bloc a:focus .icon-sm,
 .d-bloc a:focus .icon-md,
 .d-bloc a:focus .icon-lg,
@@ -189,17 +177,14 @@ a:hover {
     transition: 300ms ease-in-out;
     color: #a42a42;
 }
-
 .d-bloc .navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
 }
-
 .d-bloc .btn-wire,
 .d-bloc .btn-wire:hover {
     color: rgba(255, 255, 255, 1);
     border-color: rgba(255, 255, 255, 1);
 }
-
 .d-bloc .panel {
     color: rgba(0, 0, 0, 0.5);
 }
@@ -252,9 +237,6 @@ a:hover {
 .l-bloc .divider-h span {
     border-color: rgba(0, 0, 0, 0.1);
 }
-
-/*fin des color*/
-
 .d-bloc .panel .a-btn,
 .l-bloc .a-btn,
 .l-bloc .navbar a,
@@ -272,7 +254,6 @@ a:hover {
 .l-bloc p a {
     color: rgba(0, 0, 0, 0.6);
 }
-
 .d-bloc .panel .a-btn:hover,
 .l-bloc .a-btn:hover,
 .l-bloc .navbar a:hover,
@@ -344,10 +325,9 @@ a:hover {
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
-    border-bottom: white solid 2px; /*rajout d une bordure*/
+    border-bottom: white solid 2px;
 }
 
-/*au survol apparition d une bordeure inferieur*/
 .navbar-brand img:hover {
     border-bottom: black solid 2px;
 }
@@ -366,49 +346,38 @@ a:hover {
     float: right;
     z-index: 1;
 }
-
-/*au survol apparition d une bordeure inferieur*/
 .navbar-nav li {
     border-bottom: solid 2px white;
 }
-/*au survol apparition d une bordeure inferieur*/
 .navbar-nav li:hover {
     border-bottom: solid 2px;
 }
-
 .nav > li {
     float: left;
     margin-top: 4px;
     font-size: 16px;
 }
-
 .navbar-nav .open .dropdown-menu > li > a {
     text-align: inherit;
 }
-
 .nav > li a:hover,
 .nav > li a:focus {
     background: transparent;
 }
-
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
 }
-
 .navbar-toggle:hover {
     background: transparent !important;
 }
-
 .navbar-toggle .icon-bar {
     background-color: rgba(0, 0, 0, 0.5);
     width: 26px;
 }
-
 .nav-invert .navbar .nav {
     float: left;
 }
-
 .nav-invert .navbar-header,
 .nav-invert .navbar-brand {
     float: right;
@@ -426,7 +395,7 @@ a:hover {
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
-        color: #313030; /*ameliore du contraste en assombrissant la couleur*/
+        color: #313030;
     }
     .nav-invert .site-navigation {
         left: 0;
@@ -506,9 +475,6 @@ nav .caret {
 .btn.pull-right {
     margin: 0 0 5px 5px;
 }
-
-/*suppression d'un effet de survol*/
-
 btn-d {
     color: #fff;
     background: rgba(0, 0, 0, 0.3);
@@ -517,13 +483,11 @@ btn-d {
 button {
     outline: none !important;
 }
-/*amelioration bloc 2*/
 .explain {
     font-size: 22px;
     margin: auto;
     width: 65%;
 }
-/*amelioration bloc 2 presentation de l agence*/
 .quote {
     display: block;
     margin: auto;
@@ -533,8 +497,6 @@ button {
     width: 85%;
     color: #313030;
 }
-
-/*taille de la balise cite*/
 cite {
     font-style: normal;
     font-size: initial;
@@ -596,11 +558,9 @@ cite {
     opacity: 0;
     z-index: 500;
     transition: all 0.3s ease-in-out;
-    background-color: #a42a42; /*amelioration du visuel*/
+    background-color: #a42a42;
     border: solid 2px white;
 }
-
-/*Mise en place de la surbrillance au survol et appuie du scrollToTop*/
 .scrollToTop:hover {
     background-color: #fcac1b;
 }
@@ -748,7 +708,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #313030 !important; /*corection de la couleur */
+    color: #313030 !important;
 }
 
 .container {
@@ -774,7 +734,7 @@ a {
 }
 
 p {
-    font-size: 16px; /*grossissement du pont*/
+    font-size: 16px;
 }
 
 .tight-width-whitespace {
@@ -802,7 +762,7 @@ p {
 }
 
 h2 {
-    font-size: 28px; /*grossissement de la taile*/
+    font-size: 28px;
     line-height: 1.4em;
 }
 
@@ -850,8 +810,6 @@ h4 {
     margin-top: 50px;
 }
 
-/*correction de la marge*/
-
 .portfolio-row .portfolio-thumb {
     margin-left: auto;
     margin-right: auto;
@@ -861,11 +819,10 @@ h4 {
 }
 
 .black-background {
-    background-color: #5c5737; /*correction de la couleur*/
+    background-color: #5c5737;
     padding: 40px 40px 40px 40px;
 }
 
-/*correction de la couleur de fond*/
 .grey-background {
     background-color: #3f3e3e;
     padding: 40px 40px 40px 40px;
@@ -891,14 +848,13 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #fff; /*correction en blanc*/
+    background-color: #fff;
 }
 
-/*teinte en rouge le fond*/
 .bgc-atomic-tangerine--color {
     background-color: #a42a42;
 }
-/*teinte en rouge le fond*/
+
 .tc-white {
     color: #a42a42 !important;
 }
@@ -906,7 +862,6 @@ h4 {
 .tc-image {
     color: #ffffff !important;
 }
-/*amelioration btn atomic*/
 
 .btn-atomic-tangerine {
     background: #a42a42;
@@ -925,12 +880,9 @@ h4 {
     color: #313030 !important;
     border: solid 2px white;
 }
-/*ajout et definition hauteur du bloc*/
 #bloc-1-hero {
     min-height: 476.033px;
 }
-
-/*centrage du bloc*/
 .ltc-white {
     display: inline-block;
     color: #ffffff !important;
@@ -940,7 +892,7 @@ h4 {
     border: solid 3px;
     border-style: dotted;
 }
-/*effet au survol*/
+
 .ltc-white:hover {
     color: #f4fcfc !important;
 }
@@ -961,8 +913,6 @@ h4 {
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
 }
-/*.bg-lines-h2-bg {background-image: url("img/lines-h2-bg.png");}*/
-
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
 }
@@ -970,8 +920,6 @@ h4 {
 .bg-presentation {
     background-image: url("img/image-de-presentation.bmp");
 }
-
-/*mise en place du formulaire*/
 
 .image-resize-mode {
     width: 7.15em;
@@ -1004,8 +952,6 @@ h4 {
     box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.07),
         0px 0px 3px 3px rgba(164, 42, 66, 0.6);
 }
-/*Amelioration du media*/
-
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
