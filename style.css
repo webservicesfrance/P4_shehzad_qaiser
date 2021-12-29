@@ -131,7 +131,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: #313030; /*contraste amelioré*/
+    color: #313030;
 }
 
 .d-bloc .a-btn:hover,
@@ -609,7 +609,6 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
-/*Rajout du focus au lien a*/
 a[data-lightbox]:focus img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
@@ -918,7 +917,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 .image-resize-mode {
