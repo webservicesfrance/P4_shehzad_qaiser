@@ -1,42 +1,61 @@
-RewriteEngine On
-
-	## no-www -> www
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
-	## http -> https
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
-
-AddType 'text/html; charset=UTF-8' html
-
-<IfModule mod_expires.c>
-
- ExpiresActive On
- ExpiresByType image/jpg "access plus 31536000 seconds"
- ExpiresByType image/jpeg "access plus 31536000 seconds"
- ExpiresByType image/png "access plus 31536000 seconds"
- ExpiresByType image/bmp "access plus 31536000 seconds"
- ExpiresByType image/woff "access plus 31536000 seconds"
- ExpiresByType image/ico "access plus 31536000 seconds"
- ExpiresByType text/css "access plus 31536000 seconds"
- ExpiresByType text/javascript "access plus 31536000 seconds"
- ExpiresByType text/html "access plus 604800 seconds"
-
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/opentype
+# For Olders Browsers Which Can't Handle Compression
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 </IfModule>
 
-<ifmodule mod_headers.c>
+# BEGIN Cache-Control Headers
+<IfModule mod_headers.c>
+<FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+<FilesMatch "\.(js)$">
+Header set Cache-Control "max-age=2592000, private"
+</FilesMatch>
+<filesMatch "\.(html|htm)$">
+Header set Cache-Control "max-age=7200, public"
+</filesMatch>
+# Enleve le cache pour les ressources dynamiques
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+Header unset Cache-Control
+</FilesMatch>
+</IfModule>
+# END Cache-Control Headers
 
-<filesmatch "\\.(ico|jpe?g|png|bmp|woff|gif|swf|gz|ttf|webp)$">
-Header set Cache-Control "max-age=31536000"
-</filesmatch>
-<filesmatch "\\.(css)$">
-Header set Cache-Control "max-age=31536000"
-</filesmatch>
-<filesmatch "\\.(js)$">
-Header set Cache-Control "max-age=31536000"
-</filesmatch>
-<filesmatch "\\.(html|htm)$">
-Header set Cache-Control "max-age=604800"
-</filesmatch>
-
-</ifmodule>
+# BEGIN Expires Headers
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+</IfModule>
+# END Expires Headers
